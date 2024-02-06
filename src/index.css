@@ -2,29 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar {
-  background-color: rgb(50, 47, 47);
-  color: white;
-  padding: 10px;
-}
+/* COMPONENTS */
+@layer components {
+  /* Landing Page */
+  .app{
+    @apply bg-tosca h-screen;
+  }
 
-.navbar ul {
-  display: flex;
-  width: 600px;
-  margin: 0px auto;
-  font-size: 14px;
-  list-style: none;
-}
+  /* Navbar */
+  .navbar{
+    @apply bg-black text-white p-3;
+  }
 
-.navbar ul li {
-  margin: 10px;
-}
+  .navbar ul {
+    @apply flex w-[600px] m-0 text-sm list-none;
+  }
 
-.app {
-  background: rgb(44, 183, 134);
-  height: 100vh;
- }
- .container {
+  .navbar ul li {
+    @apply m-3;
+  }
+
+   /* .container {
   width: 600px;
   margin: 0px auto;
  }
@@ -43,5 +41,22 @@
  }
  .container .card img {
   width: 100%;
- }
- 
+ } */
+
+  /* Blog */
+  .container {
+    @apply w-[600px] m-auto;
+  }
+
+  .container .blog{
+    @apply flex p-3;
+  }
+
+  .container .card {
+    @apply bg-white m-3 p-3 border rounded w-1/2 text-sm text-abu-gelap;
+  }
+
+  .container .card img {
+    @apply w-full max-h-52 object-cover;
+  }
+}
