@@ -1,4 +1,5 @@
 import blogData from '../../blog.json'
+import Card from './Card';
 
 type Blog = {
   id: number,
@@ -12,13 +13,7 @@ const Blog = () => {
     <div className="container">
       <div className='blog'>
         {blogData.map((blog: Blog) => 
-          <div className='card' key={blog.id}>
-            <img src={blog.cover} alt="content cover" />
-            <section className="details">
-              <h2>{blog.title}</h2>
-              <h4>{blog.author}</h4>
-            </section>
-          </div>
+          <Card key={blog.id} image={blog.cover} title={blog.title} author={blog.author}/>
         )}
       </div>
     </div>
